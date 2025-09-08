@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import AdminLayout from "../../layouts/AdminLayout";
 import AuthLayout from "../../layouts/AuthLayout";
 import DefaultLayout from "../../layouts/DefaultLayout";
@@ -19,7 +19,7 @@ import Users from "../../pages/Users/Users";
 const AppRoutes = () => {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index element={<Home />} />
@@ -43,7 +43,7 @@ const AppRoutes = () => {
 
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
